@@ -24,11 +24,12 @@ namespace ZooManagement.Models.Database
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+        public string Name { get; set; }
         public string Species { get; set; }
         public ClassificationType Classification { get; set; }
-        public string Name { get; set; }
         public SexType Sex { get; set; }
         public DateTime DateOfBirth { get; set; }
         public DateTime DateAcquired { get; set; }
     }
+    
 }

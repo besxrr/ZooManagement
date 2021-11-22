@@ -48,3 +48,5 @@ C:\Training\ZooManagement\ZooManagement\obj\Debug\net5.0\ZooManagement.dll
 C:\Training\ZooManagement\ZooManagement\obj\Debug\net5.0\ref\ZooManagement.dll
 C:\Training\ZooManagement\ZooManagement\obj\Debug\net5.0\ZooManagement.pdb
 C:\Training\ZooManagement\ZooManagement\obj\Debug\net5.0\ZooManagement.genruntimeconfig.cache
+C:\Training\ZooManagement\ZooManagement\bin\Debug\net5.0\Faker.Net.5.0.dll
+C:\Training\ZooManagement\ZooManagement\bin\Debug\net5.0\de-DE\Faker.Net.5.0.resources.dll

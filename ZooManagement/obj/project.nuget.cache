@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "mCd3EGxN78OFVHTGtF/ywOY06qj6ISYP3yj2T3mWg8Sa7nkwrXq+Di6j6nKxbSWUaIOOPn0lz67eJkay1nCcOw==",
+  "dgSpecHash": "o9pE7JS/f3FI2K/18i3SekEIc4XUzWPrr22h5v5yPXkGqRXnTg0gxIJ6i8GGPw0hV7U3fwJrgeJCwnBjUREh8A==",
   "success": true,
   "projectFilePath": "C:\\Training\\ZooManagement\\ZooManagement\\ZooManagement.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\beskra\\.nuget\\packages\\faker.net\\1.5.150\\faker.net.1.5.150.nupkg.sha512",
     "C:\\Users\\beskra\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.12\\microsoft.data.sqlite.core.5.0.12.nupkg.sha512",
     "C:\\Users\\beskra\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\3.1.6\\microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",
     "C:\\Users\\beskra\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.12\\microsoft.entityframeworkcore.5.0.12.nupkg.sha512",
@@ -22,6 +23,8 @@
     "C:\\Users\\beskra\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\beskra\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\beskra\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\beskra\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\beskra\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\beskra\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.4\\sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
     "C:\\Users\\beskra\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
     "C:\\Users\\beskra\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.4\\sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
