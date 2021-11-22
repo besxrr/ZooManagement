@@ -5,33 +5,71 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace ZooManagement
 {
     public class Startup
     {
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+        
+        public IConfiguration Configuration { get; }
+        
+        public static readonly ILoggerFactory
+            LoggerFactory = Microsoft.Extensions.Logging.LoggerFactory.Create(builder => { builder.AddConsole(); });
+        
+        private static string CORS_POLICY_NAME = "_zoomanagementCorsPolicy";
+        
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ZooManagementDbContext>(options =>
+            {
+                options.UseLoggerFactory(LoggerFactory);
+                options.UseSqlite("Data Source=zoomanagement.db");
+            });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(CORS_POLICY_NAME, builder =>
+                {
+                    builder
+                        .WithOrigins("http://localhost:3000")
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                });
+            });
+            
+            services.AddControllers();
+            
+            /*services.AddTransient<IPostsRepo, PostsRepo>();*/
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseHsts();
+            }
+
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context => { await context.Response.WriteAsync("Hello World!"); });
-            });
+            app.UseCors(CORS_POLICY_NAME);
+
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }
 }
