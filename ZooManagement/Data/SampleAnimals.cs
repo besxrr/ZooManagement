@@ -18,8 +18,9 @@ namespace ZooManagement.Data
             new List<string> {"Elephant", "Mammal", "Mammal", "Male"}
         };
 
-        public static void AddAnimalsDataToList()
+        private static void AddAnimalsDataToList()
         {
+            // Create a animal business model 
             for (int animal = 0; animal < NumberOfAnimals; animal++)
             {
                 Data.Insert(animal, new List<string>
@@ -31,6 +32,8 @@ namespace ZooManagement.Data
                 });
             }
         }
+
+        
 
         public static IEnumerable<Animal> GetAnimals()
         {
