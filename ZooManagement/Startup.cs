@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using ZooManagement.Repositories;
 
 namespace ZooManagement
 {
@@ -47,8 +48,8 @@ namespace ZooManagement
             });
             
             services.AddControllers();
-            
-            /*services.AddTransient<IPostsRepo, PostsRepo>();*/
+
+            services.AddTransient<IAnimalsRepo, AnimalsRepo>();
         }
 
 

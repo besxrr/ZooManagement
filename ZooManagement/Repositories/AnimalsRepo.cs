@@ -1,8 +1,11 @@
+using System.Linq;
+using ZooManagement.Models.Database;
+
 namespace ZooManagement.Repositories
 {
     public interface IAnimalsRepo
     {
-        
+        public Animal GetAnimalById(int id);
     }
     
     
@@ -13,6 +16,11 @@ namespace ZooManagement.Repositories
         public AnimalsRepo(ZooManagementDbContext context)
         {
             _context = context;
+        }
+        
+        public Animal GetAnimalById(int id)
+        {
+            return _context.Animals.Single(animal => animal.Id == id);
         }
     }
 }
